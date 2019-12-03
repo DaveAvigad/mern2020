@@ -5,7 +5,7 @@ const app = Express();
 const port = process.env.PORT || 3000;
 
 app.use(Express.json());
-app.use(Express.urlencoded());
+app.use(Express.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
 app.use('/restaurant', restaurantRouter);

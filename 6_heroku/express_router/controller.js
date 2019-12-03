@@ -1,56 +1,47 @@
-const data = require('./data.json');
+const { user, order, restaurant } = require('./data');
 
-exports.resturantController = {
-    get(req, res) {
-        if (req.params && req.params.id) {
-            const { id } = req.params;
+exports.restaurantController = {
+  get(req, res) {
+    if (req.params && req.params.id) {
+      const { id } = req.params;
 
-            console.log('single data requested');
-            res.json(data[id - 1]);
-        } else {
-            console.log('all data requested');
-            res.json(data);
-        }
-    },
-    post(req, res) {
-        console.log('new entity saved!');
+      console.log('single data requested');
+      res.json(restaurant[id - 1]);
+    } else {
+      console.log('all data requested');
+      res.json(restaurant);
+    }
+  },
+  post(req, res) {
+    console.log('new entity saved!');
 
-        const { body } = req;
+    const { body } = req;
 
-        data.push(body);
-        res.send('new entity saved!');
-    },
-    put(req, res) {
-        const { id } = req.params;
-        const { body } = req;
-
-        for (const { key, value } of body)
-            data[id - 1][key] = value;
-
-        res.json(data[id - 1]);
-    },
+    restaurant.push(body);
+    res.send('new entity saved!');
+  },
 };
 
 exports.userController = {
-    get(req, res) {
+  get(req, res) {
+    console.log(user, order);
+  },
+  post(req, res) {
 
-    },
-    post(req, res) {
+  },
+  put(req, res) {
 
-    },
-    put(req, res) {
-
-    },
+  },
 };
 
-exports.accountController = {
-    get(req, res) {
+exports.orderController = {
+  get(req, res) {
 
-    },
-    post(req, res) {
+  },
+  post(req, res) {
 
-    },
-    delete(req, res) {
+  },
+  delete(req, res) {
 
-    },
+  },
 };

@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "david",
   "license": "ISC",
   "dependencies": {
+    "eslint-plugin-json": "^2.0.1",
     "express": "^4.17.1",
     "morgan": "^1.9.1"
   }
