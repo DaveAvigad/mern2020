@@ -1,7 +1,7 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "description": "",
+  "description": "private classes code sharing",
   "main": "arrowFunc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-json": "^2.0.1",
     "eslint-plugin-react": "^7.14.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveAvigad/mern2020.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DaveAvigad/mern2020/issues"
+  },
+  "homepage": "https://github.com/DaveAvigad/mern2020#readme"
 }
