@@ -1,6 +1,6 @@
 const Express = require('express');
 const logger = require('morgan'); // NOTE: for debugging
-const { accountRouter, restaurantRouter, userRouter } = require('./router');
+const { orderRouter, restaurantRouter, userRouter } = require('./router');
 const app = Express();
 const port = process.env.PORT || 3000;
 
@@ -10,7 +10,7 @@ app.use(logger('dev'));
 
 app.use('/restaurant', restaurantRouter);
 app.use('/user', userRouter);
-app.use('/account', accountRouter);
+app.use('/order', orderRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

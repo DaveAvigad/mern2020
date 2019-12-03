@@ -29,8 +29,8 @@ class UsersRepository extends EventEmitter {
 
 }
 
-const usersRepo = new UsersRepository();
-
-usersRepo.on('error', msg => Logger.log(msg));
+const usersRepo = (new UsersRepository())
+  .on('error', msg => Logger.log(msg))
+  .on('log', msg => Logger.log(msg));
 
 module.exports = usersRepo;
