@@ -24,12 +24,17 @@ const userSchema = new Schema({
   email: String,
   age: Number,
   active: Boolean,
-  address: addressSchema,
+  address: [addressSchema],
   phone: [String],
   website: String,
   company: companySchema,
 }, { collection: 'users' });
 
-const User = model('User', user_schema);
+// validations
+userSchema
+  .path('age')
+  .validate(obj => obj > 18, 'Age must be above 18!');
+
+const User = model('User', userSchema);
 
 module.exports = User;
