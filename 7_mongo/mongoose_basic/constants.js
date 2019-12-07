@@ -1,5 +1,5 @@
 module.exports = {
-    DB_HOST: 'ds333238.mlab.com:33238/db_2020',
-    DB_USER: 'db_user',
-    DB_PASS: 'db_pass0'
-}
+  DB_HOST: 'cluster0-3mb3k.mongodb.net/test?retryWrites=true&w=majority',
+  DB_USER: 'db_user',
+  DB_PASS: 'db_pass',
+};
