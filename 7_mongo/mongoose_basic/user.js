@@ -35,6 +35,21 @@ userSchema
   .path('age')
   .validate(obj => obj > 18, 'Age must be above 18!');
 
+// Setters:
+
+userSchema
+  .path('name')
+  .set(obj => String(obj).toUpperCase());
+
+// Pre-save:
+
+userSchema
+  .pre('save', next => {
+    console.log('Do something before save');
+
+    return next();
+  });
+
 const User = model('User', userSchema);
 
 module.exports = User;
