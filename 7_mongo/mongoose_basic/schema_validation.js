@@ -8,7 +8,7 @@ const user = new User({
   name: 'Yossi Maxime',
   phone: ['586.493.6943 140', '986.493.6943 456'],
   website: 'jacynthe.com',
-  age: 12,
+  age: 22,
   address: {
     geo: [{ lat: 0.783738, lng: 0.28928 }],
     street: 'Dayna Park',
