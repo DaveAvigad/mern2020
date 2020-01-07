@@ -33,7 +33,8 @@ const userSchema = new Schema({
 // validations
 userSchema
   .path('age')
-  .validate(obj => obj > 18, 'Age must be above 18!');
+  .validate(obj => obj > 18,
+    'Age must be above 18!');
 
 // Setters:
 
