@@ -6,7 +6,6 @@ const promiseMsg = () => new Promise((resolve, reject) => {
 
   return reject(new Error('Message: 👿'));
 });
-
 const clown = async () => {
   console.log('Before: 🤡');
 
